@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "jsx": "preserve",
+        "strict": true,
+        "target": "ESNext",
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "moduleResolution": "bundler",
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "types": [
+            "vitest/globals"
+        ]
+    },
+    "exclude": [
+        "packages",
+        "play",
+        "node_modules"
+    ]
+}

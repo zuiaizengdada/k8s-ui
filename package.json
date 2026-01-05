@@ -1,0 +1,27 @@
+{
+  "name": "k8s-ui-monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -C play dev",
+    "build": "pnpm -r build",
+    "test": "vitest",
+    "type-check": "pnpm -r run type-check"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vue/tsconfig": "^0.5.0",
+    "element-plus": "^2.5.0",
+    "happy-dom": "^13.0.0",
+    "typescript": "^5.2.0",
+    "vite": "^5.0.0",
+    "vitest": "^1.2.0",
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "@types/node": "^25.0.3",
+    "@vue/test-utils": "^2.4.6",
+    "vue-router": "^4.6.4",
+    "vue-tsc": "^3.2.1"
+  }
+}
