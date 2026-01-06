@@ -9,7 +9,7 @@ const { status } = defineProps<{
 const ns = useNamespace('status-badge')
 
 defineOptions({
-  name: 'K8sStatusBadge'
+  name: 'K8sStatusBadge',
 })
 
 // Map K8s status to Element Plus tag types

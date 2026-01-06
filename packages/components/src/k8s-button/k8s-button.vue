@@ -11,7 +11,7 @@ defineProps<{
 const ns = useNamespace('k8s-button')
 
 defineOptions({
-  name: 'K8sButton'
+  name: 'K8sButton',
 })
 </script>
 

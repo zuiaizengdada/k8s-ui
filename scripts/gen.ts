@@ -24,8 +24,7 @@ async function run() {
       type: 'text',
       name: 'name',
       message: 'Resource name (kebab-case, e.g. my-button):',
-      validate: (value: string) =>
-        !value ? 'Name is required' : true,
+      validate: (value: string) => (!value ? 'Name is required' : true),
     },
   ])
 
@@ -40,7 +39,7 @@ async function run() {
     .split('-')
     .map((part: string) => part.charAt(0).toUpperCase() + part.slice(1))
     .join('')
-  
+
   const camelName = pascalName.charAt(0).toLowerCase() + pascalName.slice(1)
   const componentName = pascalName.startsWith('K8s') ? pascalName : `K8s${pascalName}`
 
@@ -88,7 +87,7 @@ defineProps<{
     <!-- content -->
   </div>
 </template>
-`
+`,
   )
 
   // Index File
@@ -99,7 +98,7 @@ import ${pascalName} from './${kebabName}.vue'
 
 export const ${componentName} = withInstall(${pascalName})
 export default ${componentName}
-`
+`,
   )
 
   // Test File
@@ -114,14 +113,14 @@ describe('${pascalName}', () => {
     expect(wrapper.exists()).toBe(true)
   })
 })
-`
+`,
   )
-  
+
   // Append export to global components index
   const componentsIndex = path.join(packagesDir, 'components/index.ts')
   if (fs.existsSync(componentsIndex)) {
-      const exportStatement = `export * from './src/${kebabName}'\n`
-      await fs.appendFile(componentsIndex, exportStatement)
+    const exportStatement = `export * from './src/${kebabName}'\n`
+    await fs.appendFile(componentsIndex, exportStatement)
   }
 
   console.log(chalk.green(`Component ${kebabName} created successfully!`))
@@ -129,8 +128,10 @@ describe('${pascalName}', () => {
 
 async function createHook(kebabName: string, camelName: string) {
   const fileName = kebabName.startsWith('use-') ? kebabName : `use-${kebabName}`
-  const fileCamelName = camelName.startsWith('use') ? camelName : `use${camelName.charAt(0).toUpperCase() + camelName.slice(1)}`
-  
+  const fileCamelName = camelName.startsWith('use')
+    ? camelName
+    : `use${camelName.charAt(0).toUpperCase() + camelName.slice(1)}`
+
   const file = path.join(packagesDir, 'hooks/src', `${fileName}.ts`)
   const testDir = path.join(packagesDir, 'hooks/src/__tests__')
   const testFile = path.join(testDir, `${fileName}.spec.ts`)
@@ -149,7 +150,7 @@ async function createHook(kebabName: string, camelName: string) {
   // your implementation
   return {}
 }
-`
+`,
   )
 
   // Test File
@@ -163,9 +164,9 @@ describe('${fileCamelName}', () => {
     expect(result).toBeDefined()
   })
 })
-`
+`,
   )
-  
+
   console.log(chalk.green(`Hook ${fileName} created successfully!`))
 }
 
@@ -187,7 +188,7 @@ async function createUtil(kebabName: string, camelName: string) {
     `export const ${camelName} = () => {
   // your implementation
 }
-`
+`,
   )
 
   // Test File
@@ -201,7 +202,7 @@ describe('${camelName}', () => {
     // expect(result).toBe(...)
   })
 })
-`
+`,
   )
 
   console.log(chalk.green(`Util ${kebabName} created successfully!`))

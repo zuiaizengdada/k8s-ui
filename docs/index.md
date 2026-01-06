@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: "K8s UI"
-  text: "A Vue 3 Component Library for Kubernetes"
-  tagline: "Beautiful, consistent, and type-safe components."
+  name: 'K8s UI'
+  text: 'A Vue 3 Component Library for Kubernetes'
+  tagline: 'Beautiful, consistent, and type-safe components.'
   actions:
     - theme: brand
       text: Get Started

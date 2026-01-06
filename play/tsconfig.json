@@ -9,6 +9,13 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "../auto-imports.d.ts", "../components.d.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "../auto-imports.d.ts",
+    "../components.d.ts"
+  ],
   "exclude": ["node_modules", "dist"]
 }

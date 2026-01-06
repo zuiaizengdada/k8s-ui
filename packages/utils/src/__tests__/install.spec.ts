@@ -17,7 +17,7 @@ describe('install', () => {
       name: 'TestComponent',
     }
     const componentWithInstall = withInstall(component)
-    
+
     const app = {
       component: vi.fn(),
     } as unknown as App

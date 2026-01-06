@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { K8sStatusBadge, K8sLabel } from '@k8s-ui/components'
+import { K8sStatusBadge, K8sLabel, K8sButton } from '@k8s-ui/components'
 </script>
 
 <template>
@@ -22,6 +22,13 @@ import { K8sStatusBadge, K8sLabel } from '@k8s-ui/components'
       <K8sLabel labelKey="app" labelValue="nginx" />
       <K8sLabel labelKey="env" labelValue="production" />
       <K8sLabel labelKey="tier" labelValue="frontend" />
+    </div>
+    <el-divider />
+    <h2>K8sButton Demo</h2>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap">
+      <K8sButton type="primary" size="small">111</K8sButton>
+      <K8sButton type="success" size="default">222</K8sButton>
+      <K8sButton type="warning" size="large">333</K8sButton>
     </div>
   </div>
 </template>

@@ -5,9 +5,7 @@ import globals from 'globals'
 
 import { readFileSync } from 'node:fs'
 
-const autoImportGlobals = JSON.parse(
-  readFileSync('./.eslintrc-auto-import.json', 'utf-8'),
-)
+const autoImportGlobals = JSON.parse(readFileSync('./.eslintrc-auto-import.json', 'utf-8'))
 
 export default [
   {
@@ -17,7 +15,14 @@ export default [
 
   {
     name: 'app/files-to-ignore',
-    ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
+    ignores: [
+      '**/dist/**',
+      '**/dist-ssr/**',
+      '**/coverage/**',
+      '**/node_modules/**',
+      '**/.vitepress/cache/**',
+      '**/.vitepress/dist/**',
+    ],
   },
 
   {
@@ -37,5 +42,11 @@ export default [
 
   ...pluginVue.configs['flat/essential'],
   ...vueTsEslintConfig(),
+  {
+    files: ['docs/demos/**/*.vue'],
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
+  },
   skipFormatting,
 ]
