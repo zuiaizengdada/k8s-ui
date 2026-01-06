@@ -1,27 +1,27 @@
-# Getting Started
+# 快速上手
 
-Welcome to **K8s UI**, a Vue 3 component library designed for building Kubernetes-themed dashboards.
+欢迎使用 **K8s UI**，这是一个专为构建 Kubernetes 风格管理后台而设计的 Vue 3 组件库。
 
-## Installation
+## 安装
 
 ```bash
-# using pnpm
+# 使用 pnpm
 pnpm add @k8s-ui/components @k8s-ui/hooks @k8s-ui/utils
 
-# using npm
+# 使用 npm
 npm install @k8s-ui/components @k8s-ui/hooks @k8s-ui/utils
 ```
 
-## Setup
+## 配置
 
-Import the components you need in your `main.ts`:
+在你的 `main.ts` 文件中引入所需的组件：
 
 ```typescript
 import { createApp } from 'vue'
 import App from './App.vue'
-import '@k8s-ui/components/style.css' // Import styles (if available)
+import '@k8s-ui/components/style.css' // 引入样式 (如果已构建)
 
-// Import specific components
+// 引入特定组件
 import { K8sButton } from '@k8s-ui/components'
 
 const app = createApp(App)
@@ -29,12 +29,12 @@ app.use(K8sButton)
 app.mount('#app')
 ```
 
-## Component Usage
+## 组件使用
 
-All components are prefixed with `K8s` to avoid conflicts.
+为了避免命名冲突，所有组件均以 `K8s` 作为前缀。
 
 ```vue
 <template>
-  <K8sButton type="primary">Click Me</K8sButton>
+  <K8sButton type="primary">点击我</K8sButton>
 </template>
 ```

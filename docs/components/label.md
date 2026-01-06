@@ -1,8 +1,8 @@
-# Label
+# Label 标签
 
-key-value pair label component.
+键值对标签组件，常用于展示 Kubernetes 资源的 Labels。
 
-## Basic Usage
+## 基础用法
 
 <script setup>
 import Basic from '../demos/label/Basic.vue'
@@ -15,9 +15,9 @@ import BasicSource from '../demos/label/Basic.vue?raw'
 
 ## API
 
-### Attributes
+### 属性 (Attributes)
 
-| Name       | Description                 | Type     | Default |
-| :--------- | :-------------------------- | :------- | :------ |
-| labelKey   | The key part of the label   | `string` | -       |
-| labelValue | The value part of the label | `string` | -       |
+| 属性名     | 说明           | 类型     | 默认值 |
+| :--------- | :------------- | :------- | :----- |
+| labelKey   | 标签的 Key     | `string` | -      |
+| labelValue | 标签的 Value值 | `string` | -      |

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-// Note: In real usage, you simply use <K8sStatusBadge />
-// This demo shows various statuses.
+// 注意：实际使用时，直接使用 <K8sStatusBadge /> 即可
+// 本示例展示了不同状态下的样式表现
 </script>
 
 <template>

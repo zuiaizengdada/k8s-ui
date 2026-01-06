@@ -12,7 +12,7 @@ defineOptions({
   name: 'K8sStatusBadge',
 })
 
-// Map K8s status to Element Plus tag types
+// 将 K8s 状态映射为 Element Plus 的 Tag 类型
 const type = computed(() => {
   const s = status.toLowerCase()
   if (s === 'running' || s === 'completed' || s === 'ready') return 'success'

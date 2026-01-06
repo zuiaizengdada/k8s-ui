@@ -1,8 +1,8 @@
-# Button
+# Button 按钮
 
-Basic button component for K8s UI.
+基础按钮组件。
 
-## Basic Usage
+## 基础用法
 
 <script setup>
 import Basic from '../demos/button/Basic.vue'
@@ -15,17 +15,17 @@ import BasicSource from '../demos/button/Basic.vue?raw'
 
 ## API
 
-### Attributes
+### 属性 (Attributes)
 
-| Name     | Description                   | Type                                                                   | Default   |
-| :------- | :---------------------------- | :--------------------------------------------------------------------- | :-------- |
-| type     | Button type                   | `primary` \| `success` \| `warning` \| `danger` \| `info` \| `default` | `default` |
-| size     | Button size                   | `large` \| `default` \| `small`                                        | `default` |
-| disabled | Whether to disable the button | `boolean`                                                              | `false`   |
-| loading  | Whether it's loading          | `boolean`                                                              | `false`   |
+| 属性名   | 说明       | 类型                                                                   | 默认值    |
+| :------- | :--------- | :--------------------------------------------------------------------- | :-------- |
+| type     | 按钮类型   | `primary` \| `success` \| `warning` \| `danger` \| `info` \| `default` | `default` |
+| size     | 按钮尺寸   | `large` \| `default` \| `small`                                        | `default` |
+| disabled | 是否禁用   | `boolean`                                                              | `false`   |
+| loading  | 是否加载中 | `boolean`                                                              | `false`   |
 
-### Slots
+### 插槽 (Slots)
 
-| Name    | Description    |
+| 插槽名  | 说明           |
 | :------ | :------------- |
-| default | Custom content |
+| default | 按钮自定义内容 |

@@ -1,8 +1,8 @@
-# Status Badge
+# Status Badge 状态徽章
 
-Display the status of Kubernetes resources.
+用于展示 Kubernetes 资源（如 Pod, Node）的运行状态。
 
-## Basic Usage
+## 基础用法
 
 <script setup>
 import Basic from '../demos/status-badge/Basic.vue'
@@ -15,19 +15,19 @@ import BasicSource from '../demos/status-badge/Basic.vue?raw'
 
 ## API
 
-### Attributes
+### 属性 (Attributes)
 
-| Name   | Description                               | Type     | Default |
-| :----- | :---------------------------------------- | :------- | :------ |
-| status | The status string (e.g. Running, Pending) | `string` | -       |
+| 属性名 | 说明                                    | 类型     | 默认值 |
+| :----- | :-------------------------------------- | :------- | :----- |
+| status | 状态字符串 (例如 Running, Pending, ...) | `string` | -      |
 
-### Status Mapping
+### 状态映射
 
-The component automatically maps standard K8s statuses to colors:
+组件内置了 K8s 常见状态到颜色的映射规则：
 
-| Status                                  | Color            |
-| :-------------------------------------- | :--------------- |
-| Running, Completed, Ready               | Green (Success)  |
-| Error, Failed, CrashLoopBackOff         | Red (Danger)     |
-| Pending, Terminating, ContainerCreating | Orange (Warning) |
-| Others                                  | Gray (Info)      |
+| 状态关键词                              | 颜色           |
+| :-------------------------------------- | :------------- |
+| Running, Completed, Ready               | 绿色 (Success) |
+| Error, Failed, CrashLoopBackOff         | 红色 (Danger)  |
+| Pending, Terminating, ContainerCreating | 橙色 (Warning) |
+| 其他 (Others)                           | 灰色 (Info)    |

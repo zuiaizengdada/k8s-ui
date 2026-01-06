@@ -2,25 +2,25 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'K8s UI',
-  description: 'A Vue 3 Component Library for Kubernetes',
+  description: '基于 Vue 3 的 Kubernetes 常用业务组件库',
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/getting-started' },
-      { text: 'Components', link: '/components/button' },
+      { text: '首页', link: '/' },
+      { text: '指南', link: '/guide/getting-started' },
+      { text: '组件', link: '/components/button' },
     ],
 
     sidebar: [
       {
-        text: 'Guide',
-        items: [{ text: 'Getting Started', link: '/guide/getting-started' }],
+        text: '指南',
+        items: [{ text: '快速上手', link: '/guide/getting-started' }],
       },
       {
-        text: 'Components',
+        text: '组件',
         items: [
-          { text: 'Button', link: '/components/button' },
-          { text: 'Label', link: '/components/label' },
-          { text: 'Status Badge', link: '/components/status-badge' },
+          { text: 'Button 按钮', link: '/components/button' },
+          { text: 'Label 标签', link: '/components/label' },
+          { text: 'Status Badge 状态徽章', link: '/components/status-badge' },
         ],
       },
     ],
