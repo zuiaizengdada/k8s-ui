@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+
+/* 
+  Tailwind v4 explicit source configuration.
+  Paths are relative to this file.
+*/
+@source "../../packages/components";
+@source "../";

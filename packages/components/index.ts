@@ -1,3 +1,3 @@
-import K8sStatusBadge from './src/k8s-status-badge/k8s-status-badge.vue'
-
-export { K8sStatusBadge }
+export * from './src/k8s-status-badge'
+export * from './src/k8s-label'
+export * from './src/k8s-button'

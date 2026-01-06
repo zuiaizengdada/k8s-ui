@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "ESNext",
+    "types": ["vitepress/client", "element-plus/global", "node"]
+  },
+  "include": ["**/*.ts", "**/*.vue", ".vitepress/**/*.ts", ".vitepress/**/*.vue"],
+  "exclude": ["node_modules"]
+}

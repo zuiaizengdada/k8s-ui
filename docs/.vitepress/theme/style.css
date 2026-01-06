@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+@source "../../../packages/components";
+@source "../";
+
+/* Fix for VitePress + Tailwind conflict */
+:root {
+  --vp-c-bg: #ffffff;
+}

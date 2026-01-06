@@ -1,16 +1,18 @@
 {
-    "name": "@k8s-ui/components",
-    "version": "0.0.1",
-    "main": "index.ts",
-    "module": "index.ts",
-    "dependencies": {
-        "element-plus": "^2.5.0",
-        "vue": "^3.4.0"
-    },
-    "scripts": {
-        "type-check": "vue-tsc --noEmit"
-    },
-    "peerDependencies": {
-        "vue": "^3.4.0"
-    }
+  "name": "@k8s-ui/components",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "module": "index.ts",
+  "dependencies": {
+    "@k8s-ui/hooks": "workspace:*",
+    "@k8s-ui/utils": "workspace:*",
+    "element-plus": "^2.5.0",
+    "vue": "^3.5.26"
+  },
+  "scripts": {
+    "type-check": "vue-tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  }
 }

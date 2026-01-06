@@ -1,26 +1,14 @@
 {
-    "extends": "../tsconfig.json",
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "@k8s-ui/components": [
-                "../packages/components"
-            ]
-        },
-        "types": [
-            "node"
-        ],
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@k8s-ui/components": ["../packages/components"]
     },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.d.ts",
-        "src/**/*.tsx",
-        "src/**/*.vue"
-    ],
-    "exclude": [
-        "node_modules",
-        "dist"
-    ]
+    "types": ["node"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "../auto-imports.d.ts", "../components.d.ts"],
+  "exclude": ["node_modules", "dist"]
 }

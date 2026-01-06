@@ -1,0 +1,15 @@
+{
+  "name": "@k8s-ui/hooks",
+  "version": "0.0.0",
+  "private": false,
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.ts",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "dependencies": {
+    "@k8s-ui/utils": "workspace:*"
+  }
+}
