@@ -10,6 +10,7 @@
     "test:hooks": "vitest packages/hooks",
     "test:utils": "vitest packages/utils",
     "gen": "esno scripts/gen.ts",
+    "del": "esno scripts/del.ts",
     "type-check": "pnpm -r run type-check",
     "lint": "eslint . --fix",
     "docs:dev": "pnpm -C docs dev",
