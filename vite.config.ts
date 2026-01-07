@@ -21,7 +21,8 @@ export default defineConfig({
     }),
   ],
   test: {
-    environment: 'happy-dom',
+    environment: 'jsdom',
+    setupFiles: ['./scripts/test-setup.ts'],
     server: {
       deps: {
         inline: ['element-plus'],

@@ -97,9 +97,9 @@ defineProps<{
   await fs.writeFile(
     indexFile,
     `import { withInstall } from '@k8s-ui/utils'
-import ${pascalName} from './${kebabName}.vue'
+import _${pascalName} from './${kebabName}.vue'
 
-export const ${componentName} = withInstall(${pascalName})
+export const ${componentName} = withInstall(_${pascalName})
 export default ${componentName}
 `,
   )
