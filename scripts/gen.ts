@@ -34,7 +34,10 @@ async function run() {
   }
 
   const { type, name } = result
-  const kebabName = name
+  let kebabName = name
+  if (type === 'component' && !kebabName.startsWith('k8s-')) {
+    kebabName = `k8s-${kebabName}`
+  }
   const pascalName = kebabName
     .split('-')
     .map((part: string) => part.charAt(0).toUpperCase() + part.slice(1))

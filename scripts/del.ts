@@ -35,7 +35,8 @@ async function run() {
   const { type, name } = result
 
   if (type === 'component') {
-    await deleteComponent(name)
+    const componentName = name.startsWith('k8s-') ? name : `k8s-${name}`
+    await deleteComponent(componentName)
   } else if (type === 'hook') {
     await deleteHook(name)
   } else if (type === 'util') {
